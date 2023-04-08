@@ -45,4 +45,9 @@ public Dto getUserByUserId(String userId){
   return modelMapper.map(user ,Dto.class);
 
 }
+
+public Dto getUserByUserIdAndAddress(String userId,String userAddress){
+    User user=repo.getUserByUserIdAndAddress( userId,userAddress);
+    return modelMapper.map(user,Dto.class);
+}
 }

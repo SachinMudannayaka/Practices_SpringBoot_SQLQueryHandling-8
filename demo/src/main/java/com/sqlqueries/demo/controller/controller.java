@@ -43,4 +43,8 @@ public class controller {
     public Dto getUserByUserId(@PathVariable String userId){
         return service.getUserByUserId(userId);
     }
+    @GetMapping("/getUserByUserIdAndAddress/{userId}/{userAddress}")
+    public Dto getUserByUserIdAndAddress(@PathVariable String userId,@PathVariable String userAddress){
+        return service.getUserByUserIdAndAddress(userId, userAddress);
+    }
 }
